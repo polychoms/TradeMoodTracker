@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TradeMood Tracker</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>📈 TradeMood Tracker</h1>
+    <p class="app-description">
+        TradeMood Tracker helps crypto and stock traders stay self-aware during trading sessions.<br />
+        Log your daily <strong>mood</strong>, <strong>profit/loss (%)</strong>, and a personal <strong>note</strong> to reflect on your decisions.<br />
+        Track emotional patterns over time with visual graphs and avoid impulsive habits like FOMO.<br />
+        <em>🧠 Be more mindful. Trade smarter.</em>
+      </p>
+
+    <form id="entryForm">
+      <label>Mood:</label>
+      <div class="mood-options">
+        <button type="button" class="mood">🤑</button>
+        <button type="button" class="mood">🙂</button>
+        <button type="button" class="mood">😐</button>
+        <button type="button" class="mood">😡</button>
+        <button type="button" class="mood">😞</button>
+      </div>
+
+      <label for="result">Profit/Loss (%):</label>
+      <input type="number" id="result" placeholder="Enter % gain or loss" step="0.01" />
+
+      <label for="note">Note:</label>
+      <textarea id="note" placeholder="Leave a note about your trade"></textarea>
+
+      <button type="submit">Save Entry</button>
+    </form>
+
+    <h2>📋 Your Entries</h2>
+    <ul id="entryList"></ul>
+
+
+    <h2>📊 Profit/Loss Trend</h2>
+    <canvas id="trendChart" width="400" height="200"></canvas>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
